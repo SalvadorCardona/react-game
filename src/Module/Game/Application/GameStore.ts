@@ -1,8 +1,8 @@
 import { Mesh, Object3D, Renderer, Scene } from "three"
-import createCamera from "@/Module/Game/Domain/Factory/createCamera.ts"
+import createCamera from "@/Module/Game/Object3d/Camera/createCamera.ts"
 import { Camera } from "@react-three/fiber"
-import createRenderer from "@/Module/Game/Domain/Factory/createRenderer.ts"
-import createScene from "@/Module/Game/Domain/Factory/createScene.ts"
+import createRenderer from "@/Module/Game/Object3d/Level/createRenderer.ts"
+import createScene from "@/Module/Game/Object3d/Level/createScene.ts"
 
 type ActionCallBack = (gameState: GameStateInterface) => void
 

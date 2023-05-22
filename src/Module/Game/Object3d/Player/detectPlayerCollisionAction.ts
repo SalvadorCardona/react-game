@@ -1,8 +1,10 @@
 import { GameStateInterface } from "@/Module/Game/Application/GameStore.ts"
 import { Box3 } from "three"
-import collisionBehavior from "@/Module/Game/Domain/Behavior/collisionBehavior.ts"
+import collisionBehavior from "@/Module/Game/Object3d/Player/collisionBehavior.ts"
 
-export default function detectCollisionAction(gameState: GameStateInterface): void {
+export default function detectPlayerCollisionAction(
+  gameState: GameStateInterface
+): void {
   const playerBox = new Box3().setFromObject(gameState.player)
   gameState.scene.children.forEach((child) => {
     if (gameState.player.id === child.id) return

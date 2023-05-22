@@ -1,10 +1,12 @@
 import "./App.css"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createHashRouter,
+} from "react-router-dom"
 import { routes } from "@/Module/Navigation/Application/routes.tsx"
-// 1. Import the extendTheme function
 import { extendTheme, ChakraProvider } from "@chakra-ui/react"
 
-// 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
   brand: {
     900: "#1a365d",
@@ -14,8 +16,8 @@ const colors = {
 }
 
 const theme = extendTheme({ colors })
-const router = createBrowserRouter(routes)
 
+const router = createHashRouter(routes)
 function App() {
   return (
     <>

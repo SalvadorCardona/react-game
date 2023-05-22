@@ -1,6 +1,7 @@
 import { GameStateInterface } from "@/Module/Game/Application/GameStore.ts"
 import CoordinableInterface from "@/Module/Shared/Domain/CoordinableInterface.ts"
 import cowModel from "@/Module/Game/Object3d/Cow/cowModel.ts"
+import mainLevelConfiguration from "@/Module/Game/Object3d/Level/mainLevelConfiguration.ts"
 
 const cowList: Record<string, "left" | "right"> = {}
 
@@ -19,14 +20,14 @@ export default function createCow(
     gameState.addAction(() => {
       if (cowList[model.uuid] === "left") {
         model.position.x -= 0.1
-        if (model.position.x < -3) {
+        if (model.position.x < mainLevelConfiguration.roadStartX) {
           cowList[model.uuid] = "right"
           model.rotation.y = Math.PI / 2
         }
       }
       if (cowList[model.uuid] === "right") {
         model.position.x += 0.1
-        if (model.position.x > 3) {
+        if (model.position.x > mainLevelConfiguration.roadEndX) {
           cowList[model.uuid] = "left"
           model.rotation.y = 1.5 * Math.PI
         }

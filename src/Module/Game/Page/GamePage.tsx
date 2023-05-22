@@ -1,7 +1,7 @@
 import "./GamePage.css"
 import { useCallback } from "react"
 import { useGameStore } from "@/Module/Game/Application/GameStore.ts"
-import mainLevel from "@/Module/Game/Object3d/Level/mainLevel.ts"
+import createMainLevel from "@/Module/Game/Object3d/Level/createMainLevel.ts"
 import { InterfaceGameComponent } from "@/Module/Game/Page/Component/InterfaceGameComponent.tsx"
 
 export function GamePage() {
@@ -12,7 +12,7 @@ export function GamePage() {
     useGameStore(node)
     if (gameStore.scene.children.length) return
 
-    mainLevel(gameStore)
+    createMainLevel(gameStore)
   })
 
   return (

@@ -1,8 +1,9 @@
 import { GameStateInterface } from "@/Module/Game/Application/GameStore.ts"
 import CoordinableInterface from "@/Module/Shared/Domain/CoordinableInterface.ts"
-import createCoin from "@/Module/Game/Domain/Factory/createCoin.ts"
-import createCow from "@/Module/Game/Domain/Factory/createCow.ts"
+import createCoin from "@/Module/Game/Object3d/Coin/createCoin.ts"
+import createCow from "@/Module/Game/Object3d/Cow/createCow.ts"
 import isPair from "@/Module/Shared/Domain/isPair.ts"
+import mainLevelConfiguration from "@/Module/Game/Object3d/Level/mainLevelConfiguration.ts"
 
 export default function generateCoins(gameState: GameStateInterface): void {
   const distanceBeetwenCoins = 4
@@ -28,6 +29,6 @@ export default function generateCoins(gameState: GameStateInterface): void {
     createCow(gameState, position)
 
     currentPositionX++
-    if (currentPositionX === 2) currentPositionX = -1
+    if (currentPositionX === 5) currentPositionX = 0
   }
 }

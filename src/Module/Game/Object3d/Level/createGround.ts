@@ -1,8 +1,12 @@
 import { Mesh, MeshPhongMaterial, PlaneGeometry } from "three"
+import mainLevelConfiguration from "@/Module/Game/Object3d/Level/mainLevelConfiguration.ts"
 
 export default function createGround(): Mesh {
   const ground = new Mesh(
-    new PlaneGeometry(10000, 10000),
+    new PlaneGeometry(
+      mainLevelConfiguration.levelSizeX,
+      mainLevelConfiguration.levelSizeZ
+    ),
     new MeshPhongMaterial({ color: "#F0EC80", depthWrite: false })
   )
 

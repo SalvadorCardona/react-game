@@ -1,6 +1,6 @@
 import { GameStateInterface } from "@/Module/Game/Application/GameStore.ts"
-import { TractorModel } from "@/Module/Game/Object3d/Tractor/TratorModel.ts"
-import controllerBehavior from "@/Module/Game/Domain/Behavior/controllerBehavior.ts"
+import { TractorModel } from "@/Module/Game/Object3d/Player/playerModel.ts"
+import controllerBehavior from "@/Module/Game/Object3d/Player/controllerBehavior.ts"
 
 export default function createPlayer(gameStore: GameStateInterface): void {
   TractorModel().then((gltf) => {
