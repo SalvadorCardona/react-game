@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build-preview": "vite build --base=https://salvadorcardona.github.io/react-game/",
+    "deploy-local": "gh-pages -d dist",
+    "deploy-gh": "yarn build-preview && yarn deploy-local"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.6.1",

@@ -5,6 +5,7 @@ import playSound from "@/Module/Shared/Application/playSound.ts"
 import coinNoiseUrl from "@/Module/Game/Object3d/Coin/coince-noise.wav?url"
 import cowNoiseUrl from "@/Module/Game/Object3d/Cow/cow-noise.wav?url"
 import { cowModelUrl } from "@/Module/Game/Object3d/Cow/cowModel.ts"
+import { finishLineModelUrl } from "@/Module/Game/Object3d/FinishLine/finishLineModel.ts"
 
 export default function collisionBehavior(
   player: Object3D,
@@ -24,5 +25,8 @@ export default function collisionBehavior(
     playSound(cowNoiseUrl).then((sound) => {
       sound.duration = 0.5
     })
+  }
+  if (objectDetected.name === finishLineModelUrl) {
+    alert("it's the end. Your score is : " + useGameStore().score.coin)
   }
 }

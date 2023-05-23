@@ -8,7 +8,6 @@ export default function controllerBehavior(gameState: GameStateInterface): void 
       y: gameState.player.position.y,
       z: gameState.player.position.z,
     }
-    console.log(gameState.player.position)
     if (
       event.key === "ArrowLeft" &&
       mainLevelConfiguration.roadStartX < gameState.player.position.x

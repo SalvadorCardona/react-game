@@ -1,7 +1,7 @@
 import { GLTF } from "three-stdlib"
 import ModelGltf from "./model.glb?url"
-import GltfLoader from "@/Module/Shared/Application/GltfLoader.ts"
+import gltfLoader from "@/Module/Shared/Application/gltfLoader.ts"
 
 export function TractorModel(): Promise<GLTF> {
-  return GltfLoader(ModelGltf)
+  return gltfLoader(ModelGltf)
 }

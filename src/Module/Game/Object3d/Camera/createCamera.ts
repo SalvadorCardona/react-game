@@ -6,7 +6,7 @@ export default function createCamera(): Camera {
     40,
     window.innerWidth / window.innerHeight,
     1,
-    100
+    300
   )
   camera.position.set(0, 10, 0)
 

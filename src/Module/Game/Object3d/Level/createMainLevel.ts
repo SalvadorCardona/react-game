@@ -1,18 +1,18 @@
 import { GameStateInterface } from "@/Module/Game/Application/GameStore.ts"
-import createGround from "@/Module/Game/Object3d/Level/createGround.ts"
+import createGround from "@/Module/Game/Object3d/Ground/createGround.ts"
 import createDirectionalLight from "@/Module/Game/Object3d/Level/createDirectionalLight.ts"
 import createHemisphereLight from "@/Module/Game/Object3d/Level/createHemisphereLight.ts"
 import createPlayer from "@/Module/Game/Object3d/Player/createPlayer.ts"
 import cameraBehavior from "@/Module/Game/Object3d/Camera/cameraBehavior.ts"
-import generateCoins from "@/Module/Game/Object3d/Level/Generator/generateCoins.ts"
+import mainLevelGenerator from "@/Module/Game/Object3d/Level/Generator/mainLevelGenerator.ts"
 import autoRunPlayer from "@/Module/Game/Object3d/Player/autoRunPlayer.ts"
 import detectPlayerCollisionAction from "@/Module/Game/Object3d/Player/detectPlayerCollisionAction.ts"
-import { createRoad } from "@/Module/Game/Object3d/Level/createRoad.ts"
+import { createRoad } from "@/Module/Game/Object3d/Road/createRoad.ts"
 import startLevelMusic from "@/Module/Game/Object3d/Level/startLevelMusic.ts"
 
 export default function createMainLevel(gameStore: GameStateInterface): void {
   createPlayer(gameStore)
-  generateCoins(gameStore)
+  mainLevelGenerator(gameStore)
   createRoad(gameStore)
 
   gameStore.add(createDirectionalLight())
