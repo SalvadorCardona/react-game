@@ -39,6 +39,7 @@ const gameState: GameStateInterface = {
     this.render()
   },
   remove: function (item: Object3D) {
+    this.scene.remove(item)
     this.render()
   },
   update: function (item: Object3D) {

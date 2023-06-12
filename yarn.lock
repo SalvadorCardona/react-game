@@ -4126,6 +4126,7 @@ __metadata:
     react-router: ^6.11.1
     react-router-dom: ^6.11.1
     three: ^0.152.2
+    three-addons: ^1.2.0
     three-stdlib: ^2.21.11
     typescript: ^5.0.2
     vite: ^4.3.2
@@ -5982,6 +5983,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"three-addons@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "three-addons@npm:1.2.0"
+  dependencies:
+    three: ^0.92.0
+  checksum: 056e4275815abc462652906efdfe43e4a96c4ba568a2582709e592407c977c91c8375ff9469e01994e56bd5305fae5b0a49f0134500fbb586cf64405949d519e
+  languageName: node
+  linkType: hard
+
 "three-mesh-bvh@npm:^0.5.23":
   version: 0.5.24
   resolution: "three-mesh-bvh@npm:0.5.24"
@@ -6016,6 +6026,13 @@ __metadata:
   version: 0.152.2
   resolution: "three@npm:0.152.2"
   checksum: 6d2d990dbff60b99c7e58b7f1446bb4bd235c7db5dd848a671385e01ae5c72bec865265be7f5a82907ecc96186acc13177d7de1252bc9592f5c9ebaffd1da1e7
+  languageName: node
+  linkType: hard
+
+"three@npm:^0.92.0":
+  version: 0.92.0
+  resolution: "three@npm:0.92.0"
+  checksum: 9fcf1171473c84ac2b5bebd940adc8e4828975dccdb35c6c049468a305d1c80ff5c5467d22f32879607b6ca16791761292174714ac3ddc8adb5c9067897ea100
   languageName: node
   linkType: hard
 

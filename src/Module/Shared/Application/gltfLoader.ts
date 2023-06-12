@@ -5,6 +5,7 @@ const cache: Record<string, GLTF> = {}
 export default function gltfLoader(url: string): Promise<GLTF> {
   return new Promise((resolve) => {
     if (Object.hasOwn(cache, url)) {
+      console.log("gltfLoader cache", cache.url)
       resolve(cache.url)
     }
 
@@ -14,6 +15,7 @@ export default function gltfLoader(url: string): Promise<GLTF> {
         child.castShadow = true
       })
 
+      cache[url] = gltf
       resolve(gltf)
     })
   })

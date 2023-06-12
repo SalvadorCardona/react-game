@@ -54,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router", "virtual:0dfcc6b8f31689554addc1409541762cf53a10f1796cb482d84e2c0f126f6fb14b4cdf37abcff531e75adfbdeeb12293dd32c310ccd895fffc8c56575d4811a1#npm:6.11.1"],\
             ["react-router-dom", "virtual:0dfcc6b8f31689554addc1409541762cf53a10f1796cb482d84e2c0f126f6fb14b4cdf37abcff531e75adfbdeeb12293dd32c310ccd895fffc8c56575d4811a1#npm:6.11.1"],\
             ["three", "npm:0.152.2"],\
+            ["three-addons", "npm:1.2.0"],\
             ["three-stdlib", "virtual:0dfcc6b8f31689554addc1409541762cf53a10f1796cb482d84e2c0f126f6fb14b4cdf37abcff531e75adfbdeeb12293dd32c310ccd895fffc8c56575d4811a1#npm:2.21.11"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"],\
             ["vite", "virtual:0dfcc6b8f31689554addc1409541762cf53a10f1796cb482d84e2c0f126f6fb14b4cdf37abcff531e75adfbdeeb12293dd32c310ccd895fffc8c56575d4811a1#npm:4.3.5"],\
@@ -6317,6 +6318,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-router", "virtual:0dfcc6b8f31689554addc1409541762cf53a10f1796cb482d84e2c0f126f6fb14b4cdf37abcff531e75adfbdeeb12293dd32c310ccd895fffc8c56575d4811a1#npm:6.11.1"],\
             ["react-router-dom", "virtual:0dfcc6b8f31689554addc1409541762cf53a10f1796cb482d84e2c0f126f6fb14b4cdf37abcff531e75adfbdeeb12293dd32c310ccd895fffc8c56575d4811a1#npm:6.11.1"],\
             ["three", "npm:0.152.2"],\
+            ["three-addons", "npm:1.2.0"],\
             ["three-stdlib", "virtual:0dfcc6b8f31689554addc1409541762cf53a10f1796cb482d84e2c0f126f6fb14b4cdf37abcff531e75adfbdeeb12293dd32c310ccd895fffc8c56575d4811a1#npm:2.21.11"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"],\
             ["vite", "virtual:0dfcc6b8f31689554addc1409541762cf53a10f1796cb482d84e2c0f126f6fb14b4cdf37abcff531e75adfbdeeb12293dd32c310ccd895fffc8c56575d4811a1#npm:4.3.5"],\
@@ -8599,6 +8601,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/three-npm-0.152.2-0abc985e13-6d2d990dbf.zip/node_modules/three/",\
           "packageDependencies": [\
             ["three", "npm:0.152.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.92.0", {\
+          "packageLocation": "./.yarn/cache/three-npm-0.92.0-dc7ece4644-9fcf117147.zip/node_modules/three/",\
+          "packageDependencies": [\
+            ["three", "npm:0.92.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["three-addons", [\
+        ["npm:1.2.0", {\
+          "packageLocation": "./.yarn/cache/three-addons-npm-1.2.0-2b6ae9e87e-056e427581.zip/node_modules/three-addons/",\
+          "packageDependencies": [\
+            ["three-addons", "npm:1.2.0"],\
+            ["three", "npm:0.92.0"]\
           ],\
           "linkType": "HARD"\
         }]\

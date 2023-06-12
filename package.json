@@ -26,6 +26,7 @@
     "react-router": "^6.11.1",
     "react-router-dom": "^6.11.1",
     "three": "^0.152.2",
+    "three-addons": "^1.2.0",
     "three-stdlib": "^2.21.11",
     "vite-plugin-svgr": "^3.2.0",
     "zustand": "^4.3.8"

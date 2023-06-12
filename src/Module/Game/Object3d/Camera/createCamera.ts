@@ -8,7 +8,7 @@ export default function createCamera(): Camera {
     1,
     300
   )
-  camera.position.set(0, 10, 0)
-
+  camera.position.set(0, 120, 0)
+  camera.rotation.set(-Math.PI / 2, 0, 0)
   return camera
 }

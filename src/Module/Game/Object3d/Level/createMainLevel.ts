@@ -1,28 +1,13 @@
 import { GameStateInterface } from "@/Module/Game/Application/GameStore.ts"
-import createGround from "@/Module/Game/Object3d/Ground/createGround.ts"
-import createDirectionalLight from "@/Module/Game/Object3d/Level/createDirectionalLight.ts"
-import createHemisphereLight from "@/Module/Game/Object3d/Level/createHemisphereLight.ts"
 import createPlayer from "@/Module/Game/Object3d/Player/createPlayer.ts"
-import cameraBehavior from "@/Module/Game/Object3d/Camera/cameraBehavior.ts"
 import mainLevelGenerator from "@/Module/Game/Object3d/Level/Generator/mainLevelGenerator.ts"
-import autoRunPlayer from "@/Module/Game/Object3d/Player/autoRunPlayer.ts"
-import detectPlayerCollisionAction from "@/Module/Game/Object3d/Player/detectPlayerCollisionAction.ts"
-import { createRoad } from "@/Module/Game/Object3d/Road/createRoad.ts"
-import startLevelMusic from "@/Module/Game/Object3d/Level/startLevelMusic.ts"
+import controllerBehavior from "@/Module/Game/Object3d/Player/controllerBehavior.ts"
+import createMap from "@/Module/Game/Object3d/Map/createMap.ts"
+import { Vector3 } from "three"
 
 export default function createMainLevel(gameStore: GameStateInterface): void {
-  createPlayer(gameStore)
-  mainLevelGenerator(gameStore)
-  createRoad(gameStore)
-
-  gameStore.add(createDirectionalLight())
-  gameStore.add(createHemisphereLight())
-  gameStore.add(createGround())
-  gameStore.addAction(cameraBehavior)
-  gameStore.addAction(autoRunPlayer)
-  gameStore.addAction(detectPlayerCollisionAction)
-
+  // mainLevelGenerator(gameStore)
+  createMap(gameStore, new Vector3(0, 0, 0))
+  controllerBehavior(gameStore)
   gameStore.start()
-
-  startLevelMusic(gameStore)
 }
